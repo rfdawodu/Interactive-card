@@ -142,7 +142,6 @@ button {
 }
 button:hover {
   background-color: hsl(278, 68%, 11%, 0.8);
-  /* transition: background-color 300ms; */
 }
 label {
   font-size: 0.7rem;
@@ -153,7 +152,7 @@ label {
   margin: -20rem 55rem;
   position: absolute;
   white-space: nowrap;
-  /* display: none; */
+
   font-size: 2rem;
   font-weight: 500;
 }
@@ -161,7 +160,6 @@ label {
   display: none;
 }
 h5 {
-  /* color: hsl(0, 0%, 100%); */
   font-size: 0.8rem;
   font-weight: 500;
   padding-top: 2px;
