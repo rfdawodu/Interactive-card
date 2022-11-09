@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>interactive card</title>
+  </head>
+  <body>
+    <main>
+      <div class="bg-desktop">
+        <img src="img/bg-main-desktop.png" />
+      </div>
+      <div class="bg-mobile"><img src="img/bg-main-mobile.png" /></div>
+      <div class="front">
+        <!-- <div class="rd-white"></div>
+        <div class="rd-outline"></div> -->
+        <img src="img/card-logo.svg" alt="" class="logo" />
+        <img src="img/bg-card-front.png" class="crd-front" />
+        <p class="digit">0000 0000 0000 0000</p>
+
+        <p class="name-holder">JANE APPLESSED</p>
+        <time class="date">00</time>
+        <span class="slas">/</span>
+        <time class="yy">00</time>
+      </div>
+      <div class="back">
+        <img src="img/bg-card-back.png" class="crd-back" />
+        <p class="cvc-num">000</p>
+      </div>
+
+      <div id="form-input">
+        <h5 class="errr-msg"></h5>
+        <form action="" method="GET" id="myForm">
+          <div><img src="img/icon-complete.svg" class="check" alt="" /></div>
+          <div class="input-grp">
+            <div id="input-grp ">
+              <label for="card-holder-name" id="name">CARDHOLDER NAME</label
+              ><br />
+              <h5 id="card-name-error"></h5>
+
+              <input
+                class="input-grp"
+                type="text"
+                id="card-holder-name"
+                placeholder="e.g. Jane Applessed"
+                name="card-holder-name"
+                onclick="validate()"
+              />
+            </div>
+
+            <div id="input-grp">
+              <label for="card-number" id="number">CARD NUMBER</label><br />
+              <h5 id="num-error"></h5>
+              <input
+                class="input-grp"
+                type="number"
+                id="crd-number"
+                placeholder="e.g.1234 5678 9123 0000 "
+                max-length="16"
+                onclick="validate()"
+                name="card-number"
+              />
+            </div>
+            <div id="exp">
+              <label for="date" class="expiry-date">EXP.DATE (MM/YY)</label>
+              <h5 id="expiry-month-error "></h5>
+              <label for="cvc" id="vc"> CVC</label>
+              <h5 id="error-cvc"></h5>
+              <br />
+
+              <div id="input-grp">
+                <input
+                  type="text"
+                  maxlength="2"
+                  id="month"
+                  class="input-grp"
+                  placeholder="MM"
+                  name="date"
+                  onclick="validate()"
+                />
+                <input
+                  type="text"
+                  maxlength="2"
+                  id="year"
+                  class="input-grp"
+                  placeholder="YY"
+                  name="year"
+                  onclick="validate()"
+                />
+
+                <div id="input-grp ">
+                  <input
+                    class="input-grp"
+                    type="cvcNumber"
+                    id="cvc"
+                    name="cvc"
+                    placeholder="e.g. 123"
+                    maxlength="3"
+                    onclick="validate()"
+                  />
+                  <div>
+                    <!-- <h5 id="expiry-year-error "></h5> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn" id="submit" type="submit">Confirm</button>
+          <!-- <div class="thanks"><p id="submit-error"></p></div> -->
+        </form>
+      </div>
+      <div id="comp" class="complete hidden">
+        <img src="img/icon-complete.svg" />
+        <h6 id="thank-you-header">thank you</h6>
+        <span>we've added your <br />card details!</span>
+        <button id="continue" class="btn">Continue</button>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
