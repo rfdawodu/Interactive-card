@@ -26,13 +26,13 @@ complete.classList.add("hidden");
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (validate() || inputError.classList.contains("ok")) {
+  if (validate() && inputError.classList.contains("ok")) {
     formEl.classList.add("hidden");
     complete.classList.remove("hidden");
   } else {
     formError.textContent = " please fill the form with neccessary details🤗 ";
   }
-  validate();
+  // validate();
 });
 
 const validate = () => {
@@ -57,6 +57,7 @@ const validate = () => {
   }
 
   if (numVal === "") {
+    // itsError(inputError);
     numError.textContent = " number can't be empty 🤷‍♀️";
     inputError.classList.add("error");
   } else if (
@@ -69,12 +70,14 @@ const validate = () => {
   } else {
     numError.textContent = "";
     inputError.classList.add("ok");
+    return true;
   }
 
   if (valMont === "") {
     monthError.textContent = "please enter Date";
     inputError.classList.remove("ok");
     inputError.classList.add("error");
+    return false;
   } else {
     inputError.classList.add("ok");
   }
@@ -96,5 +99,23 @@ const validate = () => {
   }
 };
 validate();
+// validate() = true
+continuBtn.addEventListener("click", (e) => {
+  if (validate()) {
+    formEl.classList.remove("hidden");
+    complete.classList.add("hidden");
+    nameHolder.innerText = "";
+    digit.innerText = "";
+    dateMonth.innerText = "";
+    yy.innerText = "";
+  }
+});
 
-continuBtn.addEventListener("click", validate);
+const itsError = (elemen) => {
+  if (elemenError.contains("ok")) {
+    elemenError.classList.remove("ok");
+    elemenError.classList.add("error");
+  }
+};
+
+itsError();

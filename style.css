@@ -14,7 +14,7 @@ body {
 }
 main {
   width: 80%;
-  height: 92%;
+  height: 98%;
   margin: 3rem auto;
   background-color: white;
 }
@@ -202,7 +202,7 @@ h5 {
 }
 @media (max-width: 600px) {
   main {
-    width: 76.9%;
+    width: 90%;
     display: grid;
     height: 80%;
   }
@@ -217,20 +217,20 @@ h5 {
     /* position: absolute; */
     margin-left: 1rem;
     display: block;
-    margin-top: -3rem;
+    margin-top: 1rem;
     font-size: 0.7rem;
   }
   .input-grp input {
     width: 90%;
   }
   #vc {
-    margin-left: 11rem;
+    margin-left: 13rem;
   }
   #cvc {
     width: 25%;
     font-size: 0.7rem;
-    margin-left: 10rem;
-    margin-top: -3.5rem;
+    margin-left: 12rem;
+    margin-top: -3.7rem;
   }
   #month {
     font-size: 0.7rem;
@@ -243,21 +243,25 @@ h5 {
   button {
     width: 90%;
   }
+  .logo {
+    margin-top: -1rem;
+  }
 
   .crd-back {
-    margin: -18rem 5rem;
-    width: 52%;
+    margin: -20rem 5rem;
+    width: 70%;
     /* position: absolute; */
   }
   .front {
     position: absolute;
-    margin-top: 22%;
+    margin-top: 20%;
     z-index: 2;
     font-size: 0.1rem;
     margin-left: 6rem;
   }
   .crd-front {
-    width: 85%;
+    width: 100%;
+    margin-top: -2rem;
   }
   .front p {
     letter-spacing: 0.3rem;
@@ -266,6 +270,8 @@ h5 {
     margin-top: -4rem;
     font-size: 1rem;
     margin-left: -3rem;
+
+    z-index: 3;
   }
   .name-holder {
     font-size: 0.7rem;
@@ -274,7 +280,7 @@ h5 {
     margin-left: -3rem;
   }
   .yy {
-    margin-left: 10.5rem;
+    margin-left: 11rem;
 
     margin-top: 1.5rem;
     /* z-index: 3; */
@@ -283,12 +289,12 @@ h5 {
   }
   .date {
     font-size: 1rem;
-    margin-left: 8.5rem;
+    margin-left: 9rem;
     color: white;
     margin-top: 1.5rem;
   }
   .cvc-num {
-    margin: -14rem 17rem;
+    margin: -16rem 18rem;
     font-size: 0.8rem;
   }
   .complete {
@@ -304,7 +310,7 @@ h5 {
     letter-spacing: 0.1rem;
   }
   .slas {
-    margin: 1.5rem 10rem;
+    margin: 1.5rem 10.4rem;
     font-size: 1rem;
   }
   #error-cvc {
